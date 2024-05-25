@@ -1,15 +1,9 @@
-// Clase PruebaCalculadora
-public class PruebaCalculadora {
+public class pruebaCalculadora {
     public static void main(String[] args) {
-        // Crear una instancia de Calculadora
-        Calculadora calculadora = new Calculadora(10, 20);
+        Calculadora calc = new Calculadora(10, 3);
 
-        // Probar la suma
-        try {
-            int resultado = calculadora.realizarOperacion("suma");
-            System.out.println("El resultado de la suma es: " + resultado);
-        } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
-        }
+        System.out.println("Suma: " + calc.realizarOperacion("suma"));
+        System.out.println("Resta: " + calc.realizarOperacion("resta"));
+        System.out.println("Módulo: " + calc.realizarOperacion("modulo"));
     }
 }

@@ -13,13 +13,8 @@ public class Calculadora {
                 return suma();
             case "resta":
                 return resta();
-<<<<<<< HEAD
-=======
-            case "multiplicar":
-                return multiplicar();
-            case "dividir":
-                return dividir();
->>>>>>> dividir
+            case "modulo": // Agregar operación módulo
+                return modulo();
             default:
                 throw new IllegalArgumentException("Operación no soportada: " + operacion);
         }
@@ -33,25 +28,10 @@ public class Calculadora {
         return numero1 - numero2;
     }
 
-<<<<<<< HEAD
-=======
-    private int multiplicar() {
-        return numero1 * numero2;
-    }
-
-    private int dividir() {
+    private int modulo() {
         if (numero2 == 0) {
             throw new ArithmeticException("No se puede dividir por cero");
         }
-        return numero1 / numero2;
-    }
-
->>>>>>> dividir
-    public int getNumero1() {
-        return numero1;
-    }
-
-    public int getNumero2() {
-        return numero2;
+        return numero1 % numero2;
     }
 }
