@@ -15,6 +15,8 @@ public class Calculadora {
                 return resta();
             case "multiplicar":
                 return multiplicar();
+            case "dividir":
+                return dividir();
             default:
                 throw new IllegalArgumentException("Operación no soportada: " + operacion);
         }
@@ -30,6 +32,13 @@ public class Calculadora {
 
     private int multiplicar() {
         return numero1 * numero2;
+    }
+
+    private int dividir() {
+        if (numero2 == 0) {
+            throw new ArithmeticException("No se puede dividir por cero");
+        }
+        return numero1 / numero2;
     }
 
     public int getNumero1() {
